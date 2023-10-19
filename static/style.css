@@ -1,0 +1,29 @@
+/* Estilos generales */
+@import url(https://db.onlinewebfonts.com/c/dcaa0ca5fd367a0b98a3ce71fad065e5?family=Karlo+Open+W00+Regular);
+@font-face {
+    font-family: "Karlo Open W00 Regular";
+    src: url("https://db.onlinewebfonts.com/t/dcaa0ca5fd367a0b98a3ce71fad065e5.eot");
+    src: url("https://db.onlinewebfonts.com/t/dcaa0ca5fd367a0b98a3ce71fad065e5.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/dcaa0ca5fd367a0b98a3ce71fad065e5.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/dcaa0ca5fd367a0b98a3ce71fad065e5.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/dcaa0ca5fd367a0b98a3ce71fad065e5.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/dcaa0ca5fd367a0b98a3ce71fad065e5.svg#Karlo Open W00 Regular")format("svg");
+}
+.conlogo{
+ 
+    width: 100%;
+    background: linear-gradient(to right, #50F7FD, #0073f5, #50F7FD);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega un desvanecido en todos los lados */
+ 
+}
+.logop {
+    text-align: center center;
+    color: #000000;
+    font-family: "Karlo Open W00 Regular";
+    font-size: 50px;
+}
+.custom-footer {
+    color: #888; /* Color apagado, por ejemplo, gris claro */
+    font-family: Arial, sans-serif; /* Cambia la fuente de letra a Arial o cualquier otra que desees */
+    font-size: 18px; /* Cambia el tamaño de fuente si es necesario */
+}

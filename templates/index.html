@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descargar Video de YouTube</title>
+    <!-- Agrega el enlace a Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlaces a SweetAlert (v2) -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.css">
+        <!-- Enlaces a SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.css">
+    <!-- Enlaces a SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" type="text css" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.min.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="conlogo">
+            <div class="logop text-center">
+                FREE DOWNLOAD
+            </div>
+        </div>
+        <form id="downloadForm" method="POST" action="/download" class="mt-4">
+            <div class="form-group">
+                <label for="url">URL del Video de YouTube:</label>
+                <input type="text"name="url" id="url"  class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="format">Formato de Descarga:</label>
+                <select id="format" name="format" class="form-control" required>
+                    <option value="mp3">MP3</option>
+                    <option value="mp4">MP4</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Descargar</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const downloadForm = document.getElementById("downloadForm");
+            const formatSelect = document.getElementById("format");
+    
+            downloadForm.addEventListener("submit", function(event) {
+             
+    
+                const selectedFormat = formatSelect.value;
+    
+                if (selectedFormat === "") {
+                    event.preventDefault();
+                    Swal.fire({
+                        title: "¡Descarga MP4!",
+                        text: "Si quieres esta función, tienes que pagar 10 soles XD",
+                        icon: "info"
+                    });
+                }else{
+                    Swal.fire({
+                        title: "¡Descarga MP3!",
+                        text: "Espere la descarga...",
+                        icon: "success"
+                    });
+                }
+
+            });
+        });
+    </script>
+
+
+    
+    <!-- Agrega el enlace a Bootstrap JS (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<footer class="text-center mt-5 custom-footer">
+    BY JEFF
+</footer>
+
+</html>
