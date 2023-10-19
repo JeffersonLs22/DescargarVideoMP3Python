@@ -51,5 +51,8 @@ def download():
     else:
         return send_file(f"downloads/{new_filename}", as_attachment=True)
 
+# Obtener el puerto desde la variable de entorno o utilizar el puerto 5000 de manera predeterminada
+port = int(os.environ.get("PORT", 5000))
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port)
